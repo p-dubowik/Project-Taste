@@ -1,0 +1,21 @@
+
+
+$color-main: #CF383E;
+$color-accent: #BFBFBF;
+$color-text: #FFF;
+$color-background: #131313;
+
+$font-main: 'SansProBlack';
+$font-thin: 'SansProRegular';
+$font-bold: 'SansProBold';
+$font-semibold: 'SansProSemibold';
+
+$transition: all .4s ease;
+
+@mixin absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
