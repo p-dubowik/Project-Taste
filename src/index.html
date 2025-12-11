@@ -5,10 +5,100 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Taste</title>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <section class="splash">
+        <h1>Taste</h1>
+        <h2>engage in art</h2>
+    </section>
 
+    <div class="main-nav">
+        <a href="#home">home</a>
+        <a href="#search">search</a>
+        <a href="#discover">discover</a>
+    </div>
+
+    <div id="pages">
+        <section class="home" id="home">
+
+            <div class="song-list">
+
+            </div>
+
+            <section class="bottom-splash">
+                <h1>subscribe <strong>now</strong></h1>
+                <a href="#" class="button-primary">join now</a>
+                <div class="artist-image">
+                    <img src="" alt="">
+                </div>
+                <div class="artist-name">
+                    <p>dean</p>
+                    <p>hen<span>son</span></p>
+                </div>
+                <div class="announcement">
+                    <p>new album</p>
+                    <p>availaible only for subscribers</p>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="search" id="search">
+            <h2 class="page-title">search</h2>
+            <div class="search-bar">
+                <label class="name">name</label>
+                <input type="text">
+                <button type="submit">search</button>
+            </div>
+        </section>
+
+        <section class="discover" id="discover">
+            <h2 class="page-title">discover</h2>
+            <p>give it a try!</p>
+
+            <div class="song-list">
+                
+            </div>
+
+        </section>
+    </div>
+
+    <!-- green-audio-player example |DELETE LATER|
+    <div class="gap-example">
+        <audio src="songs/At_The_Top_David_Renda.mp3" type="audio/mpeg" controls></audio>
+    </div> -->
+
+    <footer>
+        <p>All rights reserved</p>
+    </footer>
+
+    <script id="template-song-div" type="text/x-handlebars-template">
+
+        <div class="song-container">
+
+            <p class="song-label">
+                <span>{{ author-name }}</span> 
+                - 
+                <span>{{ title }}</span>
+            </p>
+
+            <div class="song-player">
+                <audio src="songs/{{ filename }}" type="audio/mpeg" controls></audio>
+            </div>
+
+            <div class="subtitles">
+                <p>Categories: {{ join categories ", " }}</p>
+                <p>#{{ranking}} in the ranking</p>
+            </div>
+
+        </div>
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 </body>
 </html>
