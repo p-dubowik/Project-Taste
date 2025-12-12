@@ -1,0 +1,28 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: $color-background;
+    font-family: $font-main;
+    font-size: 16px;
+    color: $color-text;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#pages{
+
+    >* {
+        display: none;
+    }
+
+    >.active{
+        display: block;
+    }
+}

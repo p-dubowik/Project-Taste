@@ -12,17 +12,21 @@
 
     <section class="splash">
         <h1>Taste</h1>
-        <h2>engage in art</h2>
+        <h2>
+            engage<br>
+            in<br>
+            art
+        </h2>
     </section>
 
-    <div class="main-nav">
+    <div class="main-nav container">
         <a href="#home">home</a>
         <a href="#search">search</a>
         <a href="#discover">discover</a>
     </div>
 
     <div id="pages">
-        <section class="home" id="home">
+        <section class="home active" id="home">
 
             <div class="song-list">
 
@@ -30,7 +34,7 @@
 
             <section class="bottom-splash">
                 <h1>subscribe <strong>now</strong></h1>
-                <a href="#" class="button-primary join-button">join now</a>
+                <button type="submit" class="button-primary join-button">join now</button>
                 <div class="artist-image">
                     <img src="#" alt="">
                 </div>
@@ -46,16 +50,16 @@
 
         </section>
 
-        <section class="search" id="search">
+        <section class="search active" id="search">
             <h2 class="page-title">search</h2>
-            <div class="search-bar">
+            <div class="search-bar container">
                 <label class="name">name</label>
                 <input type="text">
-                <button type="submit">search</button>
+                <button type="submit" class="button-primary">search</button>
             </div>
         </section>
 
-        <section class="discover" id="discover">
+        <section class="discover active" id="discover">
             <h2 class="page-title">discover</h2>
             <p>give it a try!</p>
 
@@ -77,7 +81,7 @@
 
     <script id="template-song-div" type="text/x-handlebars-template">
 
-        <div class="song-container">
+        <div class="song-container container">
 
             <p class="song-label">
                 <span class="author-name">{{ author-name }}</span> 
