@@ -87,6 +87,8 @@
     text-decoration: none;
     color: $color-accent;
 
+    cursor: pointer;
+
     &.active{
       color: $color-text;
     }
@@ -101,4 +103,104 @@
   align-items: center;
   text-align: center;
   width: 100%;
+}
+
+/* Bottom Splash */
+
+.bottom-splash {
+  margin-top: 100px;
+  position: relative;
+
+  .subscribe-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-30%, -50%);
+
+    font-family: $font-main;
+    font-size: 50px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+
+    span {
+      font-family: $font-title;
+    }
+
+  }
+  .join-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translate(125%, -50%);
+  }
+
+  .artist-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translate(-75%, -60%);
+  }
+
+  .artist-name {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translate(-140%, -45%);
+
+    font-size: 100px;
+    line-height: 10px;
+    letter-spacing: 20px;
+    font-family: $font-title;
+    text-transform: capitalize;
+
+    .last {
+      transform: translateX(16%);
+
+      span {
+        color: $color-main;
+      }
+
+    }
+  }
+
+  .announcement {
+    position: absolute;
+    text-align: right;
+
+    bottom: 0;
+    right: 0;
+
+    transform: translate(-35%, -60%);
+
+    p {
+      font-family: $font-semibold;
+      font-size: 40px;
+      letter-spacing: 8px;
+      line-height: 27px;
+    }
+
+    p:first-of-type{
+      font-family: $font-semibold;
+      text-transform: uppercase;
+
+      color: $color-accent;
+    }
+
+  }
+
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  font-family: $font-main;
+  font-size: 20px;
+  letter-spacing: 4px;
+  line-height: 27px;
 }

@@ -31,3 +31,17 @@
 .green-audio-player .slider .gap-progress .pin{
     background-color: $color-main;
 }
+
+.button-primary {
+    background-color: $color-main;
+    color: $color-text;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: $font-bold;
+    font-size: 40px;
+    letter-spacing: 8px;
+
+    padding: 40px 30px;
+    border-radius: 5px;
+}
