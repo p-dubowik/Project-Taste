@@ -1,0 +1,33 @@
+.song-container {
+
+    margin-bottom: 10px;
+
+    .song-label {
+        font-family: $font-semibold;
+        font-size: 30px;
+        letter-spacing: 2px;
+        line-height: 27px;
+        margin-bottom: 60px;
+    }
+
+    .song-player {
+        width: 550px;
+    }
+
+    .subtitles {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 15px;
+
+        font-family: $font-main;
+        font-size: 15px;
+        letter-spacing: 2px;
+
+        color: $color-accent;
+
+    }
+}
+
+.green-audio-player .slider .gap-progress .pin{
+    background-color: $color-main;
+}

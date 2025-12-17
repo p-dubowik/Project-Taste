@@ -11,16 +11,22 @@
 <body>
 
     <section class="splash">
-        <h1>Taste</h1>
-        <h2>
-            engage<br>
-            in<br>
-            art
-        </h2>
+        <div class="splash-img">
+            <img src="/images/background.jpg" alt="">
+        </div>
+        <div class="splash-content">
+            <h1>Taste</h1>
+            <h2>
+                engage<br>
+                in<br>
+                art
+            </h2>
+        </div>
+
     </section>
 
     <div class="main-nav container">
-        <a href="#home">home</a>
+        <a href="#home" class="active">home</a>
         <a href="#search">search</a>
         <a href="#discover">discover</a>
     </div>
@@ -28,8 +34,63 @@
     <div id="pages">
         <section class="home active" id="home">
 
-            <div class="song-list">
+            <!-- DELETE LATER TEST
+             <div class="song-list">
+                <div class="song-container container">
 
+                    <p class="song-label">
+                        <span class="author-name">JOHN DOE</span>
+                        -
+                        <span class="song-title"> Where did my love go?</span>
+                    </p>
+
+                    <div class="song-player">
+                        <audio class="player" src="songs/At_The_Top_David_Renda.mp3"></audio>
+                    </div>
+
+                    <div class="subtitles">
+                        <p>Categories: Slow, melancholly</p>
+                        <p>#4 in the ranking</p>
+                    </div>
+
+                </div>
+
+                <div class="song-container container">
+
+                    <p class="song-label">
+                        <span class="author-name">Author</span>
+                        -
+                        <span class="song-title"> song title</span>
+                    </p>
+
+                    <div class="song-player">
+                        <audio class="player" src="songs/At_The_Top_David_Renda.mp3"></audio>
+                    </div>
+
+                    <div class="subtitles">
+                        <p>Categories: Slow, melancholly</p>
+                        <p>#4 in the ranking</p>
+                    </div>
+
+                </div>
+                <div class="song-container container">
+
+                    <p class="song-label">
+                        <span class="author-name">Author</span>
+                        -
+                        <span class="song-title"> song title</span>
+                    </p>
+
+                    <div class="song-player">
+                        <audio class="player" src="songs/At_The_Top_David_Renda.mp3"></audio>
+                    </div>
+
+                    <div class="subtitles">
+                        <p>Categories: Slow, melancholly</p>
+                        <p>#4 in the ranking</p>
+                    </div>
+
+                </div> -->
             </div>
 
             <section class="bottom-splash">
@@ -50,7 +111,7 @@
 
         </section>
 
-        <section class="search active" id="search">
+        <section class="search" id="search">
             <h2 class="page-title">search</h2>
             <div class="search-bar container">
                 <label class="name">name</label>
@@ -59,7 +120,7 @@
             </div>
         </section>
 
-        <section class="discover active" id="discover">
+        <section class="discover" id="discover">
             <h2 class="page-title">discover</h2>
             <p>give it a try!</p>
 
@@ -70,10 +131,6 @@
         </section>
     </div>
 
-    <!-- green-audio-player example |DELETE LATER|
-    <div class="gap-example">
-        <audio src="songs/At_The_Top_David_Renda.mp3" type="audio/mpeg" controls></audio>
-    </div> -->
 
     <footer>
         <p>All rights reserved</p>
@@ -84,13 +141,13 @@
         <div class="song-container container">
 
             <p class="song-label">
-                <span class="author-name">{{ author-name }}</span> 
+                <span class="author-name">{{ author }}</span> 
                 - 
                 <span class="song-title">{{ title }}</span>
             </p>
 
             <div class="song-player">
-                <audio src="songs/{{ filename }}" type="audio/mpeg" controls></audio>
+                <audio src="songs/{{ filename }}" type="audio/mpeg"></audio>
             </div>
 
             <div class="subtitles">
@@ -102,7 +159,8 @@
 
     </script>
 
-    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+    <script src="js/app.js" type="module"></script>
 </body>
 </html>

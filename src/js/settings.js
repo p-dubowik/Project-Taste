@@ -4,6 +4,7 @@ export const select = {
   },
   containerOf: {
     songList: '.song-list',
+    songPlayer: '.song-player',
   },
   homePage: {
     joinButton: '.join-button',
@@ -17,6 +18,6 @@ export const settings = {
   },
 };
 
-export const templates = {
-  song: Handlebars.compile(document.querySelector(select.templateOf.song)),
-};
+// export const templates = {
+//   song: Handlebars.compile(document.querySelector(select.templateOf.song)),
+// };
