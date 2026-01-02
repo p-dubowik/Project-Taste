@@ -156,11 +156,11 @@
             </p>
 
             <div class="song-player">
-                <audio src="songs/{{ filename }}" type="audio/mpeg"></audio>
+                <audio src="http://localhost:3131/songs/{{filename}}" type="audio/mpeg"></audio>
             </div>
 
             <div class="subtitles">
-                <p>Categories: {{ join categories ", " }}</p>
+                <p>Categories: {{categories}}</p>
                 <p>#{{ranking}} in the ranking</p>
             </div>
 

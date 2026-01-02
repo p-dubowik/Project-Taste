@@ -18,6 +18,6 @@ export const settings = {
   },
 };
 
-// export const templates = {
-//   song: Handlebars.compile(document.querySelector(select.templateOf.song)),
-// };
+export const templates = {
+  song: Handlebars.compile(document.querySelector(select.templateOf.song).innerHTML),
+};
