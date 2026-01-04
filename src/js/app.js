@@ -1,6 +1,9 @@
 import { select, settings, templates } from './settings.js';
 import { utils } from './utils.js';
-
+import Initializer from './components/Initializer.js';
+import Home from './components/HomePage.js';
+import Search from './components/Search.js';
+import Discover from './components/Discover.js';
 
 
 
@@ -32,14 +35,13 @@ const app = {
       .then(function(parsedResponse){
         //console.log(parsedResponse);
         thisApp.data.songs = parsedResponse;
-        thisApp.renderSongs();
+        //console.log(thisApp.data.songs)
+
+        //Works for now || CHANGE LATER
+        // new Initializer(thisApp.data.songs);
+        // const songPlayers = thisApp.dom.wrapper.querySelectorAll(select.containerOf.songPlayer);
+        // thisApp.initPlayers(songPlayers);
       })
-
-  },
-
-  renderSongs: function(container){
-    const thisApp = this;
-
 
   },
 
@@ -53,12 +55,23 @@ const app = {
     }
   },
 
+  initHome: function(){
+    new Home();
+  },
+
+  initDiscover: function(){
+    new Discover();
+  },
+
+  initSearch: function(){
+    new Search();
+  },
+
   init: function(){
     const thisApp = this;
 
     thisApp.getElements();
     thisApp.initData();
-    thisApp.initPlayers(thisApp.dom.songContainers);
   }
 };
 
