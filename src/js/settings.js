@@ -3,7 +3,11 @@ export const select = {
     song: '#template-song-div',
   },
   containerOf: {
-    songList: '.song-list',
+    songList: {
+      home: '.home .song-list',
+      discover: '.discover .song-list',
+      search: '.search .song-list',
+    },
     songPlayer: '.song-player',
   },
   homePage: {

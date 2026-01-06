@@ -3,16 +3,16 @@ import { utils } from "../utils.js";
 
 
 class Initializer {
-    constructor(data) {
+    constructor(data, songListWrapper) {
         const thisInit = this;
 
         thisInit.data = data;
 
-        thisInit.test();
+        thisInit.render(songListWrapper);
     }
     
 
-    test(){
+    render(container){
         const thisInit = this;
 
         console.log(thisInit.data);
@@ -22,15 +22,24 @@ class Initializer {
 
             thisInit.element = utils.createDOMFromHTML(generatedHTML);
 
+            const wrapper = document.querySelector(container);
 
-            const container = document.querySelector(select.containerOf.songList);
-
-            container.appendChild(thisInit.element);
+            wrapper.appendChild(thisInit.element);
         }
+
+        thisInit.initPlayers(document.querySelectorAll(select.containerOf.songPlayer));
 
     }
 
+  initPlayers(songPlayerWrapper){
+    const thisInit = this;
 
+    for(let player of songPlayerWrapper){
+      new GreenAudioPlayer(player, {
+        stopOthersOnPlay: true,
+      });
+    }
+  }
 
 }
 

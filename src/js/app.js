@@ -41,30 +41,26 @@ const app = {
         // new Initializer(thisApp.data.songs);
         // const songPlayers = thisApp.dom.wrapper.querySelectorAll(select.containerOf.songPlayer);
         // thisApp.initPlayers(songPlayers);
+
+        thisApp.initHome(thisApp.data.songs);
+        thisApp.initDiscover(thisApp.data.songs);
+        thisApp.initSearch(thisApp.data.songs);
+
       })
+    },
 
+
+
+  initHome: function(data){
+    new Home(data);
   },
 
-  initPlayers: function(container){
-    const thisApp = this;
-
-    for(let player of container){
-      new GreenAudioPlayer(player, {
-        stopOthersOnPlay: true,
-      });
-    }
+  initDiscover: function(data){
+    new Discover(data);
   },
 
-  initHome: function(){
-    new Home();
-  },
-
-  initDiscover: function(){
-    new Discover();
-  },
-
-  initSearch: function(){
-    new Search();
+  initSearch: function(data){
+    new Search(data);
   },
 
   init: function(){
