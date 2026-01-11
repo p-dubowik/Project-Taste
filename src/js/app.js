@@ -1,6 +1,4 @@
 import { select, settings, templates } from './settings.js';
-import { utils } from './utils.js';
-import Initializer from './components/Initializer.js';
 import Home from './components/HomePage.js';
 import Search from './components/Search.js';
 import Discover from './components/Discover.js';
@@ -42,6 +40,7 @@ const app = {
         // const songPlayers = thisApp.dom.wrapper.querySelectorAll(select.containerOf.songPlayer);
         // thisApp.initPlayers(songPlayers);
 
+        thisApp.updateData(thisApp.data.songs);
         thisApp.initHome(thisApp.data.songs);
         thisApp.initDiscover(thisApp.data.songs);
         thisApp.initSearch(thisApp.data.songs);
@@ -49,7 +48,22 @@ const app = {
       });
   },
 
+  updateData: function(data){
+    const thisApp = this;
 
+    for(let song of data){
+      const authorNameArray = song.filename.replace('.mp3', '').split('_');
+      const authorName = authorNameArray.slice(-2).toString().replace(',', ' ')
+
+
+      song.authorName = authorName;
+      console.log(song.authorName);
+
+    }
+
+
+
+  },
 
   initHome: function(data){
     new Home(data);

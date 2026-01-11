@@ -10,6 +10,7 @@ class Initializer {
 
     thisInit.render(songListWrapper);
   }
+
     
 
   render(container){
