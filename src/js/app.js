@@ -46,8 +46,8 @@ const app = {
         thisApp.initDiscover(thisApp.data.songs);
         thisApp.initSearch(thisApp.data.songs);
 
-      })
-    },
+      });
+  },
 
 
 

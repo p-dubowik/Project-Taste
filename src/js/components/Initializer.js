@@ -1,35 +1,40 @@
-import { select, templates } from "../settings.js";
-import { utils } from "../utils.js";
+import { select, templates } from '../settings.js';
+import { utils } from '../utils.js';
 
 
 class Initializer {
-    constructor(data, songListWrapper) {
-        const thisInit = this;
+  constructor(data, songListWrapper) {
+    const thisInit = this;
 
-        thisInit.data = data;
+    thisInit.data = data;
 
-        thisInit.render(songListWrapper);
-    }
+    thisInit.render(songListWrapper);
+  }
     
 
-    render(container){
-        const thisInit = this;
+  render(container){
+    const thisInit = this;
 
-        console.log(thisInit.data);
+    console.log(thisInit.data);
 
-        for(let song of thisInit.data){
-            const generatedHTML = templates.song(song);
+    //prepare songList container
+    const wrapper = document.querySelector(container);
 
-            thisInit.element = utils.createDOMFromHTML(generatedHTML);
+    //clear container before actual initialization
+    wrapper.innerHTML = '';
 
-            const wrapper = document.querySelector(container);
+    for(let song of thisInit.data){
+      const generatedHTML = templates.song(song);
 
-            wrapper.appendChild(thisInit.element);
-        }
+      thisInit.element = utils.createDOMFromHTML(generatedHTML);
 
-        thisInit.initPlayers(document.querySelectorAll(select.containerOf.songPlayer));
 
+      wrapper.appendChild(thisInit.element);
     }
+
+    thisInit.initPlayers(document.querySelectorAll(select.containerOf.songPlayer));
+
+  }
 
   initPlayers(songPlayerWrapper){
     const thisInit = this;

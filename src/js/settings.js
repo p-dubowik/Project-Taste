@@ -3,12 +3,21 @@ export const select = {
     song: '#template-song-div',
   },
   containerOf: {
+    home: '#home',
+    search: '#search',
+    discover: '#discover',
     songList: {
       home: '.home .song-list',
       discover: '.discover .song-list',
       search: '.search .song-list',
     },
     songPlayer: '.song-player',
+  },
+  widgets: {
+    search: {
+      input: '.search-bar input',
+      search: '.search-bar a',
+    },
   },
   homePage: {
     joinButton: '.join-button',

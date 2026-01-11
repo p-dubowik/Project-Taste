@@ -1,21 +1,21 @@
-import { select } from "../settings.js";
-import Initializer from "./Initializer.js";
+import { select } from '../settings.js';
+import Initializer from './Initializer.js';
 
 class Home{
-    constructor(data){
-        const thisHome = this;
+  constructor(data){
+    const thisHome = this;
 
-        thisHome.initSongs(data);
-    }
+    thisHome.initSongs(data);
+  }
 
 
-    initSongs(data){
-        const thisHome = this;
+  initSongs(data){
+    const thisHome = this;
 
-        const songListContainer = select.containerOf.songList.home;
+    const songListContainer = select.containerOf.songList.home;
 
-        new Initializer(data, songListContainer);
-    }
+    new Initializer(data, songListContainer);
+  }
 
 
 }
