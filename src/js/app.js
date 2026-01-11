@@ -19,6 +19,65 @@ const app = {
 
   },
 
+  initPages: function(){
+    const thisApp = this;
+
+    thisApp.pages = document.querySelector(select.containerOf.pages).children;
+    thisApp.navLinks = document.querySelectorAll(select.nav.links);
+
+    const idFromHash = window.location.hash.replace('#/', '')
+    
+    let pageMatchingHash = thisApp.pages[0].id;
+    
+    for(let page of thisApp.pages){
+      if(page.id == idFromHash){
+        pageMatchingHash = page.id;
+        break;
+      }
+    }
+    
+    thisApp.activatePage(pageMatchingHash);
+
+    for(let link of thisApp.navLinks){
+      link.addEventListener('click', function(event){
+        const clickedElement = this;
+        event.preventDefault();
+
+        /* get id from href attr */
+        const id = clickedElement.getAttribute('href').replace('#', '');
+
+        /* run thisApp.activatePage with that id */
+        thisApp.activatePage(id);
+
+        /* change URL hash */
+        window.location.hash = '#/' + id;
+
+      })
+    }
+
+    window.addEventListener('hashchange', function(){
+      const idFromHash = this.window.location.hash.replace('#/', '');
+      thisApp.activatePage(idFromHash);
+    })
+
+  },
+  
+  activatePage: function(pageId){
+    const thisApp = this;
+
+    /* add class active to matching pages, remove from non-matching */
+    for(let page of thisApp.pages){
+      page.classList.toggle(select.classNames.active, page.id == pageId);
+    }
+    /* add class active to matching links, remove from non-matching */
+    for(let link of thisApp.navLinks){
+      link.classList.toggle(
+        select.classNames.active,
+       link.getAttribute('href') == '#' + pageId
+      );
+    }
+  },
+
   initData: function(){
     const thisApp = this;
 
@@ -60,9 +119,6 @@ const app = {
       console.log(song.authorName);
 
     }
-
-
-
   },
 
   initHome: function(data){
@@ -80,6 +136,7 @@ const app = {
   init: function(){
     const thisApp = this;
 
+    thisApp.initPages();
     thisApp.getElements();
     thisApp.initData();
   }

@@ -33,18 +33,20 @@ class Initializer {
       wrapper.appendChild(thisInit.element);
     }
 
-    thisInit.initPlayers(document.querySelectorAll(select.containerOf.songPlayer));
-
+    thisInit.initPlayers(wrapper);
   }
 
-  initPlayers(songPlayerWrapper){
+  initPlayers(wrapper){
     const thisInit = this;
 
-    for(let player of songPlayerWrapper){
+    const players = wrapper.querySelectorAll(select.containerOf.songPlayer);
+
+    for(let player of players){
       new GreenAudioPlayer(player, {
         stopOthersOnPlay: true,
       });
     }
+    console.log('init')
   }
 
 }

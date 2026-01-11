@@ -3,6 +3,7 @@ export const select = {
     song: '#template-song-div',
   },
   containerOf: {
+    pages: '#pages',
     home: '#home',
     search: '#search',
     discover: '#discover',
@@ -21,6 +22,14 @@ export const select = {
   },
   homePage: {
     joinButton: '.join-button',
+  },
+
+  nav: {
+    links: '.main-nav a'
+  },
+
+  classNames: {
+    active: 'active',
   },
 };
 
