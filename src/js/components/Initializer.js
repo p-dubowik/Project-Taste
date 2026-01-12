@@ -46,7 +46,6 @@ class Initializer {
         stopOthersOnPlay: true,
       });
     }
-    console.log('init')
   }
 
 }

@@ -25,7 +25,7 @@ const app = {
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
-    const idFromHash = window.location.hash.replace('#/', '')
+    const idFromHash = window.location.hash.replace('#/', '');
     
     let pageMatchingHash = thisApp.pages[0].id;
     
@@ -52,13 +52,13 @@ const app = {
         /* change URL hash */
         window.location.hash = '#/' + id;
 
-      })
+      });
     }
 
     window.addEventListener('hashchange', function(){
       const idFromHash = this.window.location.hash.replace('#/', '');
       thisApp.activatePage(idFromHash);
-    })
+    });
 
   },
   
@@ -73,7 +73,7 @@ const app = {
     for(let link of thisApp.navLinks){
       link.classList.toggle(
         select.classNames.active,
-       link.getAttribute('href') == '#' + pageId
+        link.getAttribute('href') == '#' + pageId
       );
     }
   },
@@ -112,7 +112,7 @@ const app = {
 
     for(let song of data){
       const authorNameArray = song.filename.replace('.mp3', '').split('_');
-      const authorName = authorNameArray.slice(-2).toString().replace(',', ' ')
+      const authorName = authorNameArray.slice(-2).toString().replace(',', ' ');
 
 
       song.authorName = authorName;

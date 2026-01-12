@@ -1,5 +1,5 @@
-import { select } from "../settings.js";
-import Initializer from "./Initializer.js";
+import { select } from '../settings.js';
+import Initializer from './Initializer.js';
 
 
 
@@ -38,7 +38,7 @@ class Search{
       
       //initialize based on search
       thisSearch.initSongs(filteredList);
-    })
+    });
 
   }
 
@@ -54,7 +54,7 @@ class Search{
 
       //if lower lower case strings match, update matchingSongs array (for every song)
       if(compareSong.includes(compareValue)){
-        matchingSongs.push(song)
+        matchingSongs.push(song);
       }
     }
 
