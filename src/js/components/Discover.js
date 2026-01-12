@@ -19,14 +19,10 @@ class Discover{
   }
 
   randomizeData(data){
-    const thisDiscover = this;
-
     const randomNumber = Math.floor(Math.random() * data.length);
 
     //Assign an array with 1 item to randomSong in order to always give Initializer an array
     const randomSong = new Array(data[randomNumber]);
-
-    console.log(randomSong);
 
     return randomSong;
   }

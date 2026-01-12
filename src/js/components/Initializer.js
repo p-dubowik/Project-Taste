@@ -16,8 +16,6 @@ class Initializer {
   render(container){
     const thisInit = this;
 
-    console.log(thisInit.data);
-
     //prepare songList container
     const wrapper = document.querySelector(container);
 
@@ -37,7 +35,6 @@ class Initializer {
   }
 
   initPlayers(wrapper){
-    const thisInit = this;
 
     const players = wrapper.querySelectorAll(select.containerOf.songPlayer);
 

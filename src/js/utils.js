@@ -6,7 +6,3 @@ utils.createDOMFromHTML = function(htmlString) {
   div.innerHTML = htmlString.trim();
   return div.firstChild;
 };
-
-Handlebars.registerHelper('join', function(arr, option){
-  return arr.join(option);
-});

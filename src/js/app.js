@@ -90,14 +90,8 @@ const app = {
         return rawResponse.json();
       })
       .then(function(parsedResponse){
-        //console.log(parsedResponse);
-        thisApp.data.songs = parsedResponse;
-        //console.log(thisApp.data.songs)
 
-        //Works for now || CHANGE LATER
-        // new Initializer(thisApp.data.songs);
-        // const songPlayers = thisApp.dom.wrapper.querySelectorAll(select.containerOf.songPlayer);
-        // thisApp.initPlayers(songPlayers);
+        thisApp.data.songs = parsedResponse;
 
         thisApp.updateData(thisApp.data.songs);
         thisApp.initHome(thisApp.data.songs);
@@ -114,10 +108,7 @@ const app = {
       const authorNameArray = song.filename.replace('.mp3', '').split('_');
       const authorName = authorNameArray.slice(-2).toString().replace(',', ' ');
 
-
       song.authorName = authorName;
-      console.log(song.authorName);
-
     }
   },
 

@@ -10,7 +10,6 @@ class Home{
 
 
   initSongs(data){
-    const thisHome = this;
 
     const songListContainer = select.containerOf.songList.home;
 
