@@ -55,12 +55,11 @@
       transform: translate(40px, 25px);
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 36px;
-      letter-spacing: 11px;
-      line-height: 72px;
-
+    h2 { 
+      margin-top: 0; 
+      font-size: 36px; 
+      letter-spacing: 11px; 
+      line-height: 72px; 
       transform: translate(-20px);
     }
   }
@@ -110,6 +109,14 @@
 .bottom-splash {
   margin-top: 100px;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
 
   .subscribe-title {
     position: absolute;
