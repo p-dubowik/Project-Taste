@@ -1,4 +1,4 @@
-import { select, settings, templates } from './settings.js';
+import { select, settings } from './settings.js';
 import Home from './components/HomePage.js';
 import Search from './components/Search.js';
 import Discover from './components/Discover.js';
@@ -102,7 +102,6 @@ const app = {
   },
 
   updateData: function(data){
-    const thisApp = this;
 
     for(let song of data){
       const authorNameArray = song.filename.replace('.mp3', '').split('_');

@@ -1,3 +1,4 @@
+/* global GreenAudioPlayer */
 import { select, templates } from '../settings.js';
 import { utils } from '../utils.js';
 

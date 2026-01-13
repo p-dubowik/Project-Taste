@@ -62,7 +62,6 @@ class Search{
   }
 
   initSongs(data){
-    const thisSearch = this;
 
     const songListContainer = select.containerOf.songList.search;
 
